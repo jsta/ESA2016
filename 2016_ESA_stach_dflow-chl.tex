@@ -1,0 +1,193 @@
+\documentclass[compress,noflama,nosectionpages]{beamer}
+%--------------------------------------------------------------------------
+% Common packages
+%--------------------------------------------------------------------------
+
+\usepackage{hyphenat}%jsta added
+\usepackage{rotating}%jsta added
+\usepackage{graphicx}
+\usepackage{multicol}
+\usepackage{tabularx,ragged2e}
+\usepackage{booktabs}
+\usepackage{listings}
+\lstset{ %
+language=[LaTeX]TeX,
+basicstyle=\normalsize\ttfamily,
+keywordstyle=,
+numbers=left,
+numberstyle=\tiny\ttfamily,
+stepnumber=1,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+breaklines=true,
+frame=tb,
+framerule=0.5pt,
+tabsize=4,
+framexleftmargin=0.5em,
+framexrightmargin=0.5em,
+xleftmargin=0.5em,
+xrightmargin=0.5em
+}
+
+%--------------------------------------------------------------------------
+% Load theme
+%--------------------------------------------------------------------------
+\usetheme{hsrm}
+
+
+%------jsta test
+% \setbeamertemplate{navigation symbols}{}
+%  \makeatletter\
+% \setbeamertemplate{footline}
+% {
+%  \pgfuseshading{beamer@barshade}
+%  \ifbeamer@sb@subsection
+%  \vskip-9.75ex
+%  \else
+%  \vskip-7ex
+%  \fi
+%  \begin{beamercolorbox}[ignorebg,ht=2.25ex,dp=3.75ex]{section in head/foot}
+%  \insertnavigation{\paperwidth}
+%  \end{beamercolorbox}
+%  \ifbeamer@sb@subsection
+%  \begin{beamercolorbox}[ignorebg,ht=2.125ex,dp=1.125ex,leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+%  \usebeamerfont{subsection in head/foot}\inserctsubsectionhead
+%  \end{beambercolorbox}
+%  \fi
+%  }
+%  \setbeamertemplate{headline}{
+%  \hskip1em\usebeamercolor[fg]{navigation symbols dimmed}
+%  \insertslidenavigationsymbol
+%  \insertframenavigationsymbol
+%  \insertsectionnavigationsymbol
+%  \insertsubsectionnavigationsymbol
+%  \insertdocnavigationsymbol
+%  \insertbackfindforwardnavigationsymbol
+%  }
+% \makeatother
+
+
+%------
+
+%jsta commented out%\usepackage{dtklogos} % must be loaded after theme
+\usepackage{tikz}
+\usetikzlibrary{mindmap,backgrounds}
+
+%--------------------------------------------------------------------------
+% General presentation settings
+%--------------------------------------------------------------------------
+\title{\nohyphens{Fine-scale spatial}}
+\subtitle{\nohyphens{patterning of phytoplankton abundance in a coastal estuary}}
+\date{August 2016}
+\author{{\Medium Joseph Stachelek}, Christopher Madden, Stephen P. Kelly, Michelle Blaha}
+\institute{South Florida Water Management District\\ {\Medium Everglades Division}}
+
+%--------------------------------------------------------------------------
+% Notes settings
+%--------------------------------------------------------------------------
+\setbeameroption{show notes}
+
+\begin{document}
+%--------------------------------------------------------------------------
+% Titlepage
+%--------------------------------------------------------------------------
+
+\maketitle
+
+%\begin{frame}[plain]
+%  \titlepage
+%\end{frame}
+
+
+%--------------------------------------------------------------------------
+% Content
+%--------------------------------------------------------------------------
+\section{Introduction}
+\subsection{Introduction}
+\begin{frame}{How can we describe phytoplankton distributions?}
+
+\includegraphics[height=6cm,keepaspectratio=true]{landsat20120901.png}\\
+
+\end{frame}
+
+\begin{frame}{The Discrete Approach}
+
+\end{frame}
+
+\begin{frame}{What do we miss with the Discrete Approach?}
+
+	\begin{columns}
+		\begin{column}[c]{5cm}
+	  	\includegraphics[height=3.5cm,clip=true,trim = 20mm 0mm 0mm 0mm,keepaspectratio=true]{images/scipy_1-lg.jpg}%
+	  	\begin{itemize}
+	  		\item{Spatial Gradients}
+	  	\end{itemize}
+		\end{column}
+		\begin{column}{5cm}
+			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{images/pol03a_700.jpg}%
+			\begin{itemize}
+	  		\item{Point Source Extent}
+	  	\end{itemize}
+		\end{column}
+	\end{columns}
+     
+\end{frame}
+
+
+\begin{frame}[label=data]{The Underway Approach}
+  \begin{columns}
+    \begin{column}{5.6cm}
+      \begin{itemize}
+        \item{Quarterly surveys}\vspace{15pt}\\
+        \item{Measurements every 50m}\vspace{15pt}\\         \item{Emphasis on freshwater discharge}
+      \end{itemize}
+    \end{column}
+    \begin{column}{6.8cm}
+      \includegraphics[width=6.8cm,keepaspectratio=true]{sm-figure0.png}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
+\section{Methods}
+\subsection{Methods}
+\begin{frame}{Methods}
+
+\includegraphics[height=6cm,keepaspectratio=true]{multipanel.png}\\
+
+\end{frame}
+
+\section{Results}
+\subsection{Results}
+\begin{frame}{Results}
+
+\includegraphics[height=6cm,keepaspectratio=true]{chltimeseries.png}\\
+
+\end{frame}
+
+\section{Resources}
+\subsection{Resources}
+\begin{frame}{Resources}
+%The \tttext{ipdw} R package
+  \centering
+  \url{http://cran.r-project.org/package=ipdw}
+%   \begin{verbatim}
+%   "install.packages("ipdw")"
+%   \end{verbatim}
+  \begin{thebibliography}{10}
+  \beamertemplatearticlebibitems
+  \bibitem{stachetal2016}
+	Stachelek~J.,C.~J.~Madden,S.~P.~Kelly,M.~Blaha (submitted). Fine-scale relationships between phytoplankton abundance and environmental drivers in Florida Bay, USA.
+	\newblock \doublequoted{Estuaries and Coasts}
+  \bibitem{stachmadden2015}
+	Stachelek~J.,C.~J.~Madden. 2015. Application of Inverse Path Distance Weighting for high-density spatial mapping of coastal water quality patterns
+	\newblock \doublequoted{Int. J. Geographical Information Science}
+  \end{thebibliography}
+
+	\begin{itemize}
+		\item \url{jstachel@sfwmd.gov}
+	\end{itemize}
+\end{frame}
+
+\end{document}
