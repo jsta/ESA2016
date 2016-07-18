@@ -3,6 +3,7 @@
 % Common packages
 %--------------------------------------------------------------------------
 
+\usepackage[normalem]{ulem}%jsta added
 \usepackage{hyphenat}%jsta added
 \usepackage{rotating}%jsta added
 \usepackage{graphicx}
@@ -107,25 +108,39 @@ xrightmargin=0.5em
 \subsection{Introduction}
 \begin{frame}{How can we describe phytoplankton distributions?}
 
-\includegraphics[height=6cm,keepaspectratio=true]{landsat20120901.png}\\
+\includegraphics[height=6cm,keepaspectratio=true]{images/landsat_border.png}\\
 
 \end{frame}
 
 \begin{frame}{The Discrete Approach}
-
+	\begin{columns}
+		\begin{column}[t]{4cm}
+			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_dflow.png}%
+		\end{column}
+		
+		\begin{column}[c]{4cm}
+			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+		\end{column}
+		
+		\begin{column}[b]{4cm}
+			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{What do we miss with the Discrete Approach?}
 
 	\begin{columns}
-		\begin{column}[c]{5cm}
-	  	\includegraphics[height=3.5cm,clip=true,trim = 20mm 0mm 0mm 0mm,keepaspectratio=true]{images/scipy_1-lg.jpg}%
+		\begin{column}[c]{6cm}
+	  	\includegraphics[height=3.9cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{images/scipy_border.png}%
+	  	\vspace{3pt}
 	  	\begin{itemize}
 	  		\item{Spatial Gradients}
 	  	\end{itemize}
 		\end{column}
-		\begin{column}{5cm}
-			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{images/pol03a_700.jpg}%
+		\begin{column}{6cm}
+			\includegraphics[height=3.9cm,keepaspectratio=true]{images/pointsource_border.png}%
+			\vspace{3pt}
 			\begin{itemize}
 	  		\item{Point Source Extent}
 	  	\end{itemize}
@@ -135,7 +150,7 @@ xrightmargin=0.5em
 \end{frame}
 
 
-\begin{frame}[label=data]{The Underway Approach}
+\begin{frame}[label=data]{An Alternative - The Underway Approach}
   \begin{columns}
     \begin{column}{5.6cm}
       \begin{itemize}
@@ -144,27 +159,81 @@ xrightmargin=0.5em
       \end{itemize}
     \end{column}
     \begin{column}{6.8cm}
-      \includegraphics[width=6.8cm,keepaspectratio=true]{sm-figure0.png}
+    	\begin{picture}(60,60)(0,-18)
+      	\includegraphics[width=6.5cm,keepaspectratio=true]{figures/sm-figure0.png}
+      \end{picture}
+      \begin{picture}(80,80)(45,80)
+      	\includegraphics[width=5.5cm,keepaspectratio=true]{images/20150212_110309.jpg}
+      \end{picture}
     \end{column}
   \end{columns}
 \end{frame}
 
-
-\section{Methods}
-\subsection{Methods}
-\begin{frame}{Methods}
-
-\includegraphics[height=6cm,keepaspectratio=true]{multipanel.png}\\
-
+\begin{frame}{Chlorophyll Modelling\textsuperscript{1,2}}
+\vspace{2pt}
+	\begin{columns}
+		\begin{column}{5cm}
+			{\footnotesize
+			\begin{tabular}{| l | l |}
+				\hline
+				Instrument Package & Parameter \\ \hline
+				Optical 1 & CDOM \\
+				... & Chlorophyll \\ \hline
+				Optical 2 & CDOM \\ 
+				... & Chlorophyll \\
+				... & Phycocyanin \\
+				... & Phycoerytherin \\ \hline
+			\end{tabular}
+			}
+			\end{column}
+			\begin{column}{4.5cm}
+				\includegraphics[width=4.2cm,keepaspectratio=true]{figures/chl_onetoone.png}
+			\end{column}
+	\end{columns}
+	\small
+	\texttt{DataflowR::chlcoef(201509, corcut = 0.75)}\\
+	\texttt{> Initial correlation matrix}\\
+	\texttt{> MLR with all variables...}\\
+	\texttt{> Checking for redundancy in variables pairs}\\
+	\texttt{> Generate AIC for candidates}\\
+	\texttt{> Checking VIF...} 
+	
+\tiny{\phantom{\footnote{Sepp\"{a}l\"{a} et al. 2007 \textsuperscript{2}Venables and Ripley 2002}}}
 \end{frame}
+
+\begin{frame}{Spatial Modelling}
+
+Inverse Path Distance Weighting (IPDW)
+
+ * A non-model based machine-learning approach focused on out-of-sample prediction skill
+
+As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
+% 	\begin{columns}
+%   	\begin{column}{6.8cm}
+%     	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= -0mm 0mm 0mm 0mm]{sm-figure1.png}
+% 		\end{column}
+% 		
+% 		\begin{column}{5.4cm}
+%     	\includegraphics[width=4.8cm,keepaspectratio=true]{Picture1.png}
+%     	\begin{align*}
+%     		V = \frac{\sum\limits_{i=1}^n v_i \frac{1}{d_i^p}}{\sum\limits_{i=1}^n \frac{1}{d_i^p}}
+%     	\end{align*}
+%   	\end{column}
+% 
+% \end{columns}
+\end{frame}
+
 
 \section{Results}
-\subsection{Results}
-\begin{frame}{Results}
+	\subsection{Results}
 
-\includegraphics[height=6cm,keepaspectratio=true]{chltimeseries.png}\\
+		\begin{frame}{Results}
+			\includegraphics[height=6cm,keepaspectratio=true]{figures/chltimeseries.png}\\
+		\end{frame}
 
-\end{frame}
+		\begin{frame}{Results}
+			\includegraphics[height=6cm,keepaspectratio=true]{figures/multipanel.png}\\
+		\end{frame}
 
 \section{Resources}
 \subsection{Resources}
@@ -186,7 +255,7 @@ xrightmargin=0.5em
   \end{thebibliography}
 
 	\begin{itemize}
-		\item \url{jstachel@sfwmd.gov}
+		\item \sout{\url{jstachel@sfwmd.gov}} \url{stachel2@msu.edu}
 	\end{itemize}
 \end{frame}
 
