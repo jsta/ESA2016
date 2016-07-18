@@ -3,6 +3,7 @@
 % Common packages
 %--------------------------------------------------------------------------
 
+%\usepackage[inline]{enumitem}%jsta added
 \usepackage[normalem]{ulem}%jsta added
 \usepackage{hyphenat}%jsta added
 \usepackage{rotating}%jsta added
@@ -205,26 +206,27 @@ xrightmargin=0.5em
 \tiny{\phantom{\footnote{Sepp\"{a}l\"{a} et al. 2007 \textsuperscript{2}Venables and Ripley 2002}}}
 \end{frame}
 
-\begin{frame}{Spatial Modelling}
-
-Inverse Path Distance Weighting (IPDW)
-
- * A non-model based machine-learning approach focused on out-of-sample prediction skill
+\begin{frame}{Inverse Path Distance Weighting (IPDW)}
 
 As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
+\vspace{3pt}
  	\begin{columns}
    	\begin{column}{6.8cm}
      	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
  		\end{column}
-% 		
-% 		\begin{column}{5.4cm}
-%     	\includegraphics[width=4.8cm,keepaspectratio=true]{Picture1.png}
+ 		
+ 		\begin{column}{5.4cm}
+     	\includegraphics[width=4.8cm,keepaspectratio=true]{images/Picture1.png}
 %     	\begin{align*}
 %     		V = \frac{\sum\limits_{i=1}^n v_i \frac{1}{d_i^p}}{\sum\limits_{i=1}^n \frac{1}{d_i^p}}
 %     	\end{align*}
-%   	\end{column}
-% 
+   	\end{column}
  \end{columns}
+	Project specific optimization for: 
+	\begin{itemize}
+		\item{Spatial Grain}
+		\item{Max Neighborhood Distance}
+	\end{itemize}
 \end{frame}
 
 
