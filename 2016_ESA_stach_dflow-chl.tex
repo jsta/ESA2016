@@ -107,27 +107,60 @@ xrightmargin=0.5em
 %--------------------------------------------------------------------------
 \section{Introduction}
 \subsection{Introduction}
+
+\begin{frame}{Why describe phytoplankton distributions?}
+	Eutrophication \\
+	Water Management \\
+\end{frame}
+
 \begin{frame}{How can we describe phytoplankton distributions?}
 
-\includegraphics[height=6cm,keepaspectratio=true]{images/landsat_border.jpg}\\
+	\begin{centering}
+		\includegraphics[height=6cm,keepaspectratio=true]{images/landsat_border.jpg}\\
+	\end{centering}
 
 \end{frame}
 
 \begin{frame}{The Discrete Approach}
 	\begin{columns}
-		\begin{column}[t]{4cm}
-			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_dflow.png}%
+		\begin{column}[c]{6cm}
+			\begin{center}
+			Bay-Wide Network (1993 - 2015)
+			\includegraphics[height=5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+			\end{center}
 		\end{column}
-		
-		\begin{column}[c]{4cm}
-			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
-		\end{column}
-		
-		\begin{column}[b]{4cm}
-			\includegraphics[height=3.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+	
+		\begin{column}[c]{6cm}
+			\begin{center}
+			Coastal Network (2008 - 2015)
+			\includegraphics[height=5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_dflow.png}%
+			\end{center}
 		\end{column}
 	\end{columns}
 \end{frame}
+
+\begin{frame}{Temporal Variability}
+			\begin{columns}
+				\begin{column}[c]{6cm}
+					\includegraphics[height=4.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+				\end{column}
+				
+				\begin{column}[c]{6.0cm}
+				\begin{centering}
+					\begin{tikzpicture}
+						\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=5.9cm]{figures/chltimeseries.png}};
+						% \draw[help lines,xstep=1,ystep=1](0,0) grid (5.9,7.4);
+						% \foreach \x in {0,1,...,6}{ \node [anchor=north] at (\x,0) {\x};}
+						% \foreach \y in {0,1,...,7}{ \node [anchor=east] at (0,\y) {\y};}
+					 	% \draw[red,thick, rounded corners](3.3,5.8) rectangle (4.1,6.3);
+					 	\draw[red,thick, rounded corners](1.9,3.2) rectangle (2.4,4.8);
+					 	\draw[red,thick, rounded corners](3.6,3.2) rectangle (4.6,4.8);
+					\end{tikzpicture}
+					\end{centering}
+				\end{column}
+			\end{columns}
+			\vspace{-3em}
+		\end{frame}
 
 \begin{frame}{What do we miss with the Discrete Approach?}
 \vspace{8pt}
@@ -199,17 +232,19 @@ xrightmargin=0.5em
 	\texttt{DataflowR::chlcoef(201509, corcut = 0.75)}\\
 	\texttt{> Initial correlation matrix}\\
 	\texttt{> MLR with all variables...}\\
-	\texttt{> Checking for redundancy in variables pairs}\\
-	\texttt{> Generate AIC for candidates}\\
+	\texttt{> Checking for redundancy in variable pairs}\\
+	\texttt{> Generate AIC for candidate models}\\
 	\texttt{> Checking VIF...} 
 	
 \tiny{\phantom{\footnote{Sepp\"{a}l\"{a} et al. 2007 \textsuperscript{2}Venables and Ripley 2002}}}
 \end{frame}
 
-\begin{frame}{Inverse Path Distance Weighting (IPDW)}
+\begin{frame}{What did we learn from chl modelling?}
+\end{frame}
 
-As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
-\vspace{6pt}
+\begin{frame}{Inverse Path Distance Weighting (IPDW)}
+	As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
+	\vspace{6pt}
  	\begin{columns}
    	\begin{column}{6.8cm}
      	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
@@ -222,7 +257,7 @@ As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[fr
 %     	\end{align*}
    	\end{column}
  \end{columns}
-	Project specific optimization for: 
+	Project-specific optimization for: 
 	\begin{itemize}
 		\item{Spatial Grain}
 		\item{Max Neighborhood Distance}
@@ -230,33 +265,34 @@ As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[fr
 	\vspace{4pt}
 \end{frame}
 
-
 \section{Results}
 	\subsection{Results}
 
-		\begin{frame}{Temporal Variability}
-			\begin{columns}
-				\begin{column}[c]{6cm}
-					\includegraphics[height=4.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
-				\end{column}
-				
-				\begin{column}[c]{6.0cm}
-				\vspace{6pt}
-					\begin{tikzpicture}
-						\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=5.9cm]{figures/chltimeseries.png}};
-						% \draw[help lines,xstep=1,ystep=1](0,0) grid (5.9,7.4);
-						% \foreach \x in {0,1,...,6}{ \node [anchor=north] at (\x,0) {\x};}
-						% \foreach \y in {0,1,...,7}{ \node [anchor=east] at (0,\y) {\y};}
-					 	\draw[red,thick, rounded corners](3.3,5.8) rectangle (4.1,6.3);
-					 	\draw[red,thick, rounded corners](1.9,3.2) rectangle (2.4,4.8);
-					 	\draw[red,thick, rounded corners](3.6,3.2) rectangle (4.6,4.8);
-					\end{tikzpicture}
-				\end{column}
-			\end{columns}
+		\begin{frame}{Spatio-Temporal Variability}
+		\begin{centering}
+			\includegraphics[height=7.6cm,keepaspectratio=true]{figures/multipanel.png}\\
+		\end{centering}
 		\end{frame}
-
-		\begin{frame}{Results}
-			\includegraphics[height=6cm,keepaspectratio=true]{figures/multipanel.png}\\
+		
+		\begin{frame}{Spatio-Temporal Variability}
+					\begin{center}
+					\begin{tikzpicture}
+						\node[anchor=south west,inner sep=0] at (0.7,0) {\includegraphics[height=7.6cm]{figures/multipanel.png}};
+					% \draw[help lines,xstep=1,ystep=1](0.7,0) grid (10,7.6);
+					% \foreach \x in {0.7,1.7,...,6.7}{ \node [anchor=north] at (\x,0) {\x};}
+					% \foreach \y in {0,1,...,7}{ \node [anchor=east] at (0.7,\y) {\y};}
+					 	\draw[red,thick, rounded corners](2.9,3.4) rectangle (5.1,4.6);
+					 	\draw[red,thick, rounded corners](2.9,6) rectangle (5.1,7.2);
+					\end{tikzpicture}
+					\end{center}
+			% \vspace{-3em}
+		\end{frame}
+		
+		\begin{frame}{Spatial Variability}
+		\begin{centering}
+			Pull out 200910 and 201212 high points \\
+			Pull out elevated chl in Barnes 201502, 201507
+		\end{centering}
 		\end{frame}
 
 \section{Resources}
