@@ -130,7 +130,7 @@ xrightmargin=0.5em
 \end{frame}
 
 \begin{frame}{What do we miss with the Discrete Approach?}
-
+\vspace{8pt}
 	\begin{columns}
 		\begin{column}[c]{6cm}
 	  	\includegraphics[height=4.1cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{images/scipy_border.png}%
@@ -174,7 +174,7 @@ xrightmargin=0.5em
   \end{columns}
 \end{frame}
 
-\begin{frame}{Chlorophyll Modelling\textsuperscript{1,2}}
+\begin{frame}{Chlorophyll Modelling\textsuperscript{1 2}}
 \vspace{2pt}
 	\begin{columns}
 		\begin{column}{5cm}
@@ -209,7 +209,7 @@ xrightmargin=0.5em
 \begin{frame}{Inverse Path Distance Weighting (IPDW)}
 
 As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
-\vspace{3pt}
+\vspace{6pt}
  	\begin{columns}
    	\begin{column}{6.8cm}
      	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
@@ -227,6 +227,7 @@ As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[fr
 		\item{Spatial Grain}
 		\item{Max Neighborhood Distance}
 	\end{itemize}
+	\vspace{4pt}
 \end{frame}
 
 
@@ -234,7 +235,17 @@ As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[fr
 	\subsection{Results}
 
 		\begin{frame}{Results}
-			\includegraphics[height=6cm,keepaspectratio=true]{figures/chltimeseries.png}\\
+			\begin{columns}
+				\begin{column}{6cm}
+					\begin{tikzpicture}
+						\draw [->,>=stealth](5,1) -- (5,.5);
+					\end{tikzpicture}
+					\includegraphics[height=7.4cm,keepaspectratio=true]{figures/chltimeseries.png}\\
+				\end{column}
+				\begin{column}{5cm}
+					\includegraphics[height=4.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+				\end{column}
+			\end{columns}
 		\end{frame}
 
 		\begin{frame}{Results}
