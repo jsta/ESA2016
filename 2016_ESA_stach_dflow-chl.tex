@@ -234,16 +234,23 @@ As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[fr
 \section{Results}
 	\subsection{Results}
 
-		\begin{frame}{Results}
+		\begin{frame}{Temporal Variability}
 			\begin{columns}
-				\begin{column}{6cm}
-					\begin{tikzpicture}
-						\draw [->,>=stealth](5,1) -- (5,.5);
-					\end{tikzpicture}
-					\includegraphics[height=7.4cm,keepaspectratio=true]{figures/chltimeseries.png}\\
-				\end{column}
-				\begin{column}{5cm}
+				\begin{column}[c]{6cm}
 					\includegraphics[height=4.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+				\end{column}
+				
+				\begin{column}[c]{6.0cm}
+				\vspace{6pt}
+					\begin{tikzpicture}
+						\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=5.9cm]{figures/chltimeseries.png}};
+						% \draw[help lines,xstep=1,ystep=1](0,0) grid (5.9,7.4);
+						% \foreach \x in {0,1,...,6}{ \node [anchor=north] at (\x,0) {\x};}
+						% \foreach \y in {0,1,...,7}{ \node [anchor=east] at (0,\y) {\y};}
+					 	\draw[red,thick, rounded corners](3.3,5.8) rectangle (4.1,6.3);
+					 	\draw[red,thick, rounded corners](1.9,3.2) rectangle (2.4,4.8);
+					 	\draw[red,thick, rounded corners](3.6,3.2) rectangle (4.6,4.8);
+					\end{tikzpicture}
 				\end{column}
 			\end{columns}
 		\end{frame}
