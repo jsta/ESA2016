@@ -217,7 +217,7 @@ xrightmargin=0.5em
 				Instrument Package & Parameter \\ \hline
 				Optical 1 & CDOM \\
 				... & Chlorophyll \\ \hline
-				Optical 2 & CDOM \\ 
+				Optical 2 & CDOM \\
 				... & Chlorophyll \\
 				... & Phycocyanin \\
 				... & Phycoerytherin \\ \hline
@@ -234,12 +234,20 @@ xrightmargin=0.5em
 	\texttt{> MLR with all variables...}\\
 	\texttt{> Checking for redundancy in variable pairs}\\
 	\texttt{> Generate AIC for candidate models}\\
-	\texttt{> Checking VIF...} 
-	
+	\texttt{> Checking VIF...}
+
 \tiny{\phantom{\footnote{Sepp\"{a}l\"{a} et al. 2007 \textsuperscript{2}Venables and Ripley 2002}}}
 \end{frame}
 
 \begin{frame}{What did we learn from chl modelling?}
+	\begin{columns}
+		\begin{column}{6cm}
+			\includegraphics[width=6.2cm,keepaspectratio=true]{figures/chlcor_heatmap.png}
+		\end{column}
+		\begin{column}{6cm}
+			\includegraphics[width=6.2cm,keepaspectratio=true]{figures/modelparam_hist.png}
+		\end{column}
+	\end{columns}
 \end{frame}
 
 \begin{frame}{Inverse Path Distance Weighting (IPDW)}
@@ -249,7 +257,7 @@ xrightmargin=0.5em
    	\begin{column}{6.8cm}
      	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
  		\end{column}
- 		
+
  		\begin{column}{5.4cm}
      	\includegraphics[width=4.8cm,keepaspectratio=true]{images/Picture1.png}
 %     	\begin{align*}
@@ -257,7 +265,7 @@ xrightmargin=0.5em
 %     	\end{align*}
    	\end{column}
  \end{columns}
-	Project-specific optimization for: 
+	Project-specific optimization for:
 	\begin{itemize}
 		\item{Spatial Grain}
 		\item{Max Neighborhood Distance}
@@ -289,15 +297,16 @@ xrightmargin=0.5em
 		\end{frame}
 		
 		\begin{frame}{Spatial Variability}
+		\vspace{-2em}
 		\begin{columns}
-		\begin{column}{5cm}
+		\begin{column}{6cm}
 			\begin{center}
-			\includegraphics[height=6.8cm,keepaspectratio=true]{images/flseagrant_biscayne-blooms.png}\\
+			\fbox{\includegraphics[height=7.5cm,keepaspectratio=true,clip=TRUE,trim=0mm 0mm 0mm -2mm]{images/flseagrant_biscayne-blooms.png}}\\
 			\end{center}
 		\end{column}
-		\begin{column}{5cm}
+		\begin{column}{6cm}
 			\begin{center}
-			\includegraphics[height=6.2cm,keepaspectratio=true]{figures/barnes_chl.png}\\
+			\includegraphics[height=7.8cm,keepaspectratio=true,trim= 0mm 0mm 0mm 9mm,clip=TRUE]{figures/barnes_chl.png}\\
 			\end{center}
 		\end{column}
 		\end{columns}
@@ -324,7 +333,7 @@ xrightmargin=0.5em
   \end{thebibliography}
 
 	\begin{itemize}
-		\item \sout{\url{jstachel@sfwmd.gov}} \url{stachel2@msu.edu}
+		\item \url{stachel2@msu.edu}
 	\end{itemize}
 \end{frame}
 
