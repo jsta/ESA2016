@@ -41,6 +41,9 @@ figures/chlcor_heatmap.png: ## figures/chlcor_heatmap.png
 	
 figures/modelparam_hist.png: ## figures/modelparam_hist.png
 	Rscript R/modelparam_hist.R
+	
+figures/modelparam_counts.png: ## figures/modelparam_counts.png
+	Rscript R/modelparam_hist.R
 
 clean: ## clean
 	-rm *.snm *.nav *.log *.toc *.aux *.out
