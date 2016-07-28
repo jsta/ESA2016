@@ -18,7 +18,7 @@ move-images: ## move images
 compile-tex: move-images ## compile tex
 	xelatex 2016_ESA_stach_dflow-chl.tex
 
-all: move-images images compile-tex ## all
+all: compile-tex ## all
 	@echo "built presentation"
 
 images/scipy_border.png: ## images/scipy_border.png
