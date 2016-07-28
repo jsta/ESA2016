@@ -23,16 +23,21 @@ all: move-images images compile-tex ## all
 
 images/scipy_border.png: ## images/scipy_border.png
 	convert images/scipy_1-lg.jpg -gravity East -crop 85x100%+0+0 images/scipy_crop.png
-	convert images/scipy_crop.png -bordercolor black -border 2x2 images/scipy_border.png
+	convert images/scipy_crop.png -bordercolor black \
+	-border 2x2 -draw "fill white text 0,12 'http\://www.esri.com/\~/media/Images/Content/news/arcuser/0115/scipy\_1\-lg.jpg'" \
+	images/scipy_border.png
+	
 	
 images/pointsource_border.png: ## images/pointsource_border.png
-	convert images/pol03a_700.jpg -bordercolor black -border 2x2 images/pointsource_border.png
+	convert images/pol03a_700.jpg -bordercolor black \
+	-border 2x2 -draw "fill white text 0,12 'http\://oceanservice.noaa.gov/education/kits/pollution/media/supp\_pol03a.html'" \
+	images/pointsource_border.png
 
 images/dflow_border.jpg: ## images/dflow_border.jpg
-	convert images/20150212_110309.jpg -bordercolor black -border 2x2 images/dflow_border.jpg
+	convert images/20150212_110309.jpg -bordercolor black -border 5x5 images/dflow_border.jpg
 
 images/landsat_border.jpg: ## images/landsat_border.jpg
-	convert images/landsat20120901.png -bordercolor black -border 2x2 images/landsat_border.jpg
+	convert images/landsat20120901.png -bordercolor black -border 5x5 images/landsat_border.jpg
 	
 images: images/scipy_border.png images/pointsource_border.png images/dflow_border.jpg ## images
 

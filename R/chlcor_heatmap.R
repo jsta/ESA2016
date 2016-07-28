@@ -8,7 +8,7 @@ dt <- dt[rev(1:nrow(dt)),]
 
 p.values <- read.csv("/home/jose/Documents/Science/JournalSubmissions/DataflowChl/tables/grabs_pvalues.csv", stringsAsFactors = FALSE)
 
-gg <- ggplot(data = dt, aes(Var2, Var1, fill = value)) + geom_raster() + viridis::scale_fill_viridis() + geom_text(aes(fill = dt$value, label = dt$value), size = 10) + coord_flip() + theme_minimal() + theme(axis.title.x = element_blank(), axis.title.y = element_blank(), legend.position = "none", axis.text = element_text(size = 16)) + ggtitle(expression(paste("Correlation Matrix (",rho, ")")))
+gg <- ggplot(data = dt, aes(Var2, Var1, fill = value)) + geom_raster() + viridis::scale_fill_viridis(na.value = NA) + geom_text(aes(fill = dt$value, label = dt$value), size = 10) + coord_flip() + theme_minimal() + theme(axis.title.x = element_blank(), axis.title.y = element_blank(), legend.position = "none", axis.text = element_text(size = 16), panel.grid = element_blank()) + ggtitle(expression(paste("Correlation Matrix (",rho, ")")))
 
 ggsave("figures/chlcor_heatmap.png")	
 	
