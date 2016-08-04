@@ -106,7 +106,6 @@ xrightmargin=0.5em
 % Content
 %--------------------------------------------------------------------------
 \section{Introduction}
-\subsection{Introduction}
 
 % \begin{frame}{Why describe phytoplankton distributions?}
 % 	Eutrophication \\
@@ -121,6 +120,8 @@ xrightmargin=0.5em
 
 \end{frame}
 
+\section{Discrete Approach}
+\subsection{Methods}
 \begin{frame}{The Discrete Approach}
 	\begin{columns}
 		\begin{column}[c]{5.5cm}
@@ -139,6 +140,7 @@ xrightmargin=0.5em
 	\end{columns}
 \end{frame}
 
+\subsection{Results}
 \begin{frame}{Bay-Wide Network}
 			\begin{columns}
 				\begin{column}[c]{6cm}
@@ -177,6 +179,7 @@ xrightmargin=0.5em
 			\end{columns}
 \end{frame}
 
+\subsection{Discussion}
 \begin{frame}{What do we miss with the Discrete Approach?}
 \vspace{8pt}
 	\begin{columns}
@@ -202,6 +205,16 @@ xrightmargin=0.5em
      
 \end{frame}
 
+\begin{frame}{What do we miss with the Discrete Approach?}
+	\vspace{-1em}
+	\begin{center}
+		\includegraphics[height=7cm,keepaspectratio=true,clip=TRUE,trim=0mm 0mm 0mm -2mm]{images/flseagrant_biscayne-blooms.png}
+	\end{center}
+	\tiny{\phantom{\footnote{Adams and Blair 2014}}}
+\end{frame}
+
+\section{Underway Approach}
+\subsection{Methods}
 
 \begin{frame}[label=data]{An Alternative - The Underway Approach}
   \begin{columns}
@@ -220,6 +233,29 @@ xrightmargin=0.5em
       \end{picture}
     \end{column}
   \end{columns}
+\end{frame}
+
+\begin{frame}{Inverse Path Distance Weighting (IPDW)}
+	As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
+	\vspace{6pt}
+ 	\begin{columns}
+   	\begin{column}{6.8cm}
+     	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
+ 		\end{column}
+
+ 		\begin{column}{5.4cm}
+     	\includegraphics[width=4.8cm,keepaspectratio=true]{images/Picture1.png}
+%     	\begin{align*}
+%     		V = \frac{\sum\limits_{i=1}^n v_i \frac{1}{d_i^p}}{\sum\limits_{i=1}^n \frac{1}{d_i^p}}
+%     	\end{align*}
+   	\end{column}
+ \end{columns}
+	Project-specific optimization for:
+	\begin{itemize}
+		\item{Spatial Grain}
+		\item{Max Neighborhood Distance}
+	\end{itemize}
+	\vspace{4pt}
 \end{frame}
 
 \begin{frame}{Chlorophyll Modelling\textsuperscript{1 2}}
@@ -251,9 +287,10 @@ xrightmargin=0.5em
 	\texttt{> Generate AIC for candidate models}\\
 	\texttt{> Checking VIF...}
 
-\tiny{\phantom{\footnote{Sepp\"{a}l\"{a} et al. 2007 \textsuperscript{2}Venables and Ripley 2002}}}
+\tiny{\phantom{\footnote{Sepp\"{a}l\"{a} et al. 2007 \textsuperscript{5}Venables and Ripley 2002}}}
 \end{frame}
 
+\subsection{Results}
 \begin{frame}{What did we learn from chl modelling?}
 %\vspace{1em}
 	\begin{columns}
@@ -263,77 +300,42 @@ xrightmargin=0.5em
 		\end{column}
 		\begin{column}[c]{6cm}
 			\begin{center}
-			\includegraphics[width=4.2cm,keepaspectratio=true,clip=TRUE,trim= 0mm 5mm 0mm 7mm]{figures/modelparam_counts.png}\\
-			\includegraphics[width=4.2cm,keepaspectratio=true,clip=TRUE,trim= 0mm 0mm 0mm 2mm]{figures/modelparam_hist.png}
+			\includegraphics[width=4.5cm,keepaspectratio=true,clip=TRUE,trim= 0mm 5mm 0mm 7mm]{figures/modelparam_counts.png}\\
+			\includegraphics[width=3.9cm,keepaspectratio=true,clip=TRUE,trim= 0mm 0mm 0mm 2mm]{figures/modelparam_hist.png}
 			\end{center}
 		\end{column}
 	\end{columns}
 \end{frame}
 
-\begin{frame}{Inverse Path Distance Weighting (IPDW)}
-	As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
-	\vspace{6pt}
- 	\begin{columns}
-   	\begin{column}{6.8cm}
-     	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
- 		\end{column}
-
- 		\begin{column}{5.4cm}
-     	\includegraphics[width=4.8cm,keepaspectratio=true]{images/Picture1.png}
-%     	\begin{align*}
-%     		V = \frac{\sum\limits_{i=1}^n v_i \frac{1}{d_i^p}}{\sum\limits_{i=1}^n \frac{1}{d_i^p}}
-%     	\end{align*}
-   	\end{column}
- \end{columns}
-	Project-specific optimization for:
-	\begin{itemize}
-		\item{Spatial Grain}
-		\item{Max Neighborhood Distance}
-	\end{itemize}
-	\vspace{4pt}
+\begin{frame}{Underway Chlorophyll}
+	\begin{center}
+		\begin{tikzpicture}
+			\node[anchor=south west,inner sep=0] at (0.7,0) {\includegraphics[height=7.6cm, trim= 1mm 0mm 1mm 31mm,clip=TRUE]{figures/multipanel.png}};
+		\end{tikzpicture}
+	\end{center}
 \end{frame}
-
-\section{Results}
-	\subsection{Results}
-
-		\begin{frame}{Spatio-Temporal Variability}
-		\begin{centering}
-			\includegraphics[height=7.6cm,keepaspectratio=true]{figures/multipanel.png}\\
-		\end{centering}
-		\end{frame}
 		
-		\begin{frame}{Spatio-Temporal Variability}
+		\begin{frame}{Underway Chlorophyll}
 					\begin{center}
 					\begin{tikzpicture}
-						\node[anchor=south west,inner sep=0] at (0.7,0) {\includegraphics[height=7.6cm]{figures/multipanel.png}};
+						\node[anchor=south west,inner sep=0] at (0.7,0) {\includegraphics[height=7.6cm, trim= 1mm 0mm 1mm 31mm,clip=TRUE]{figures/multipanel.png}};
 					% \draw[help lines,xstep=1,ystep=1](0.7,0) grid (10,7.6);
 					% \foreach \x in {0.7,1.7,...,6.7}{ \node [anchor=north] at (\x,0) {\x};}
 					% \foreach \y in {0,1,...,7}{ \node [anchor=east] at (0.7,\y) {\y};}
-					 	\draw[red,thick, rounded corners](2.9,3.4) rectangle (5.1,4.6);
-					 	\draw[red,thick, rounded corners](2.9,6) rectangle (5.1,7.2);
+					 	\draw[red,thick, rounded corners](3,3.6) rectangle (5.2,4.8);
+					 	\draw[red,thick, rounded corners](3,6.3) rectangle (5.2,7.5);
 					\end{tikzpicture}
 					\end{center}
 			% \vspace{-3em}
 		\end{frame}
 		
 		\begin{frame}{Spatial Variability}
-		\vspace{-2em}
-		\begin{columns}
-		\begin{column}{6cm}
 			\begin{center}
-			\fbox{\includegraphics[height=7.5cm,keepaspectratio=true,clip=TRUE,trim=0mm 0mm 0mm -2mm]{images/flseagrant_biscayne-blooms.png}}\\
+				\includegraphics[height=5.5cm,keepaspectratio=true,trim= 1mm 0mm 1mm 10mm,clip=TRUE]{figures/201507_chl.png}\\
 			\end{center}
-		\end{column}
-		\begin{column}{6cm}
-			\begin{center}
-			\includegraphics[height=7.8cm,keepaspectratio=true,trim= 0mm 0mm 0mm 9mm,clip=TRUE]{figures/barnes_chl.png}\\
-			\end{center}
-		\end{column}
-		\end{columns}
-		
 		\end{frame}
 
-\section{Resources}
+\section{Conclusion}
 \subsection{Resources}
 \begin{frame}{Resources}
 %The \tttext{ipdw} R package
