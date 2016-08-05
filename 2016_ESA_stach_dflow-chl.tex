@@ -112,10 +112,14 @@ xrightmargin=0.5em
 % 	Water Management \\
 % \end{frame}
 
-\begin{frame}{How can we describe phytoplankton distributions?}
+\begin{frame}{Quantifying phytoplankton abundance}
 
 	\begin{centering}
-		\includegraphics[height=6cm,keepaspectratio=true]{images/landsat_border.jpg}\\
+	\begin{tikzpicture}
+		\node(img1)[anchor=south west,inner sep=0] at (0,0) {\includegraphics[height=6cm,keepaspectratio=true]{images/landsat_border.jpg}};
+		\node(img2) at (8.7,1.2){\includegraphics[height=2cm,keepaspectratio=true]{images/fl-inset_border.png}};
+	\end{tikzpicture}
+	
 	\end{centering}
 
 \end{frame}
@@ -205,7 +209,7 @@ xrightmargin=0.5em
      
 \end{frame}
 
-\begin{frame}{What do we miss with the Discrete Approach?}
+\begin{frame}{Guessing at water quality boundaries}
 	\vspace{-1em}
 	\begin{center}
 		\includegraphics[height=7cm,keepaspectratio=true,clip=TRUE,trim=0mm 0mm 0mm -2mm]{images/flseagrant_biscayne-blooms.png}
@@ -236,7 +240,7 @@ xrightmargin=0.5em
 \end{frame}
 
 \begin{frame}{Inverse Path Distance Weighting (IPDW)}
-	As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}
+	\phantom{As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}}
 	\vspace{6pt}
  	\begin{columns}
    	\begin{column}{6.8cm}
@@ -252,8 +256,8 @@ xrightmargin=0.5em
  \end{columns}
 	Project-specific optimization for:
 	\begin{itemize}
-		\item{Spatial Grain}
 		\item{Max Neighborhood Distance}
+		\item{Spatial Grain}
 	\end{itemize}
 	\vspace{4pt}
 \end{frame}
@@ -334,6 +338,13 @@ xrightmargin=0.5em
 				\includegraphics[height=5.5cm,keepaspectratio=true,trim= 1mm 0mm 1mm 10mm,clip=TRUE]{figures/201507_chl.png}\\
 			\end{center}
 		\end{frame}
+		
+		\begin{frame}{Point source extent}
+			\begin{center}
+				\includegraphics[height=7.5cm,keepaspectratio=true,trim= 1mm 0mm 1mm 10mm,clip=TRUE]{figures/201513_chl.png}\\
+			\end{center}
+		\end{frame}
+		
 
 \section{Conclusion}
 \subsection{Summary}
@@ -342,9 +353,9 @@ xrightmargin=0.5em
 \large
 Florida Bay
 \begin{itemize}
-\item{Florida Bay chlorophyll is phosphorus limited}
+\item{Florida Bay phytoplankton are phosphorus limited}
 \vspace{6pt}
-\item{Cyanobacteria are strongly associated with elevated chlorophyll}
+\item{Elevated chlorophyll is strongly associated with cyanobacteria pigment fluoresence}
 \end{itemize}
 
 Underway Sampling
@@ -370,18 +381,25 @@ Underway Sampling
 	Stachelek~J.,C.~J.~Madden. 2015. Application of Inverse Path Distance Weighting for high-density spatial mapping of coastal water quality patterns
 	\newblock \doublequoted{Int. J. Geographical Information Science}
 	
-	\vspace{3pt}
-	\begin{center}
-	\url{stachel2@msu.edu}\\
-	\url{doi.org/bcsg}
-	\end{center}
-	\vspace{3pt}
-	
 	\bibitem{stachetal2016}
 	Stachelek~J.,C.~J.~Madden,S.~P.~Kelly,M.~Blaha (in prep). Fine-scale relationships between phytoplankton abundance and environmental drivers in Florida Bay, USA.
 	%\newblock \doublequoted{Estuaries and Coasts}
   \end{thebibliography}
+  
+  \vspace{3pt}
+	\begin{center}
+	\url{stachel2@msu.edu}\\
+	\url{http://doi.org/bcsg}
+	\end{center}
+	\vspace{3pt}
 
+\end{frame}
+
+\section{Supplementary Materials}
+
+\begin{frame}{Hurricane Irene (1999)}
+	\centering
+	\includegraphics[height=6.5cm,keepaspectratio=true,trim= 1mm 0mm 1mm 10mm,clip=TRUE]{images/Irene_1999_rainfall.png}\\
 \end{frame}
 
 \end{document}
