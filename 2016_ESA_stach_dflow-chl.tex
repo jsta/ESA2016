@@ -131,7 +131,7 @@ xrightmargin=0.5em
 		\begin{column}[c]{5.5cm}
 			\begin{center}
 			Bay-Wide Network\\ (Monthly, 1993 - 2015)
-			\includegraphics[height=4.7cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
+			\includegraphics[height=4.7cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn_red.png}%
 			\end{center}
 		\end{column}
 	
@@ -148,19 +148,20 @@ xrightmargin=0.5em
 \begin{frame}{Bay-Wide Network}
 			\begin{columns}
 				\begin{column}[c]{6cm}
+				\vspace{-1em}
 					\includegraphics[height=4.5cm,clip=true,trim = 0mm 0mm 0mm 0mm,keepaspectratio=true]{figures/fbmap_wqmn.png}%
 				\end{column}
 				
 				\begin{column}[c]{6.0cm}
 				\begin{centering}
 					\begin{tikzpicture}
-						\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=5.9cm]{figures/chltimeseries.png}};
+						\node[anchor=south west,inner sep=0] at (0,0) {\includegraphics[width=5.9cm,clip=true,trim = 0mm 40mm 0mm 0mm,keepaspectratio=true]{figures/chltimeseries.png}};
 						% \draw[help lines,xstep=1,ystep=1](0,0) grid (5.9,7.4);
 						% \foreach \x in {0,1,...,6}{ \node [anchor=north] at (\x,0) {\x};}
 						% \foreach \y in {0,1,...,7}{ \node [anchor=east] at (0,\y) {\y};}
 					 	% \draw[red,thick, rounded corners](3.3,5.8) rectangle (4.1,6.3);
-					 	\draw[red,thick, rounded corners](1.9,3.2) rectangle (2.4,4.8);
-					 	\draw[red,thick, rounded corners](3.6,3.2) rectangle (4.6,4.8);
+					 	\draw[red,thick, rounded corners](1.9,0.7) rectangle (2.4,2.3);
+					 	\draw[red,thick, rounded corners](3.6,0.7) rectangle (4.6,2.3);
 					\end{tikzpicture}
 					\end{centering}
 				\end{column}
@@ -241,24 +242,26 @@ xrightmargin=0.5em
 
 \begin{frame}{Inverse Path Distance Weighting (IPDW)}
 	\phantom{As the crow flies or as the fish swims?\footnote{Little et al. 1997}\footnote[frame]{Suominen et al. 2010}}
-	\vspace{6pt}
+	%\vspace{2pt}
  	\begin{columns}
    	\begin{column}{6.8cm}
-     	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}
- 		\end{column}
+     	\includegraphics[width=6.8cm,keepaspectratio=true,clip=true,trim= 0mm 0mm 0mm 0mm]{figures/sm-figure1.png}\\
+     	\includegraphics[width=4.8cm,keepaspectratio=true]{images/disks.png}
+     \end{column}
 
  		\begin{column}{5.4cm}
-     	\includegraphics[width=4.8cm,keepaspectratio=true]{images/Picture1.png}
+     	\includegraphics[width=4.8cm,keepaspectratio=true]{images/Picture1.png}\\
+     	Project-specific optimization for:
+	\begin{itemize}
+		\item{Max Neighborhood Distance}
+		\item{Spatial Grain}
+	\end{itemize}
+     	
 %     	\begin{align*}
 %     		V = \frac{\sum\limits_{i=1}^n v_i \frac{1}{d_i^p}}{\sum\limits_{i=1}^n \frac{1}{d_i^p}}
 %     	\end{align*}
    	\end{column}
  \end{columns}
-	Project-specific optimization for:
-	\begin{itemize}
-		\item{Max Neighborhood Distance}
-		\item{Spatial Grain}
-	\end{itemize}
 	\vspace{4pt}
 \end{frame}
 
@@ -341,7 +344,7 @@ xrightmargin=0.5em
 		
 		\begin{frame}{Point source extent}
 			\begin{center}
-				\includegraphics[height=7.5cm,keepaspectratio=true,trim= 1mm 0mm 1mm 10mm,clip=TRUE]{figures/201513_chl.png}\\
+				\includegraphics[height=7.5cm,keepaspectratio=true,trim= 1mm 0mm 1mm 10mm,clip=TRUE]{figures/201513_chl_biglegend.png}\\
 			\end{center}
 		\end{frame}
 		
